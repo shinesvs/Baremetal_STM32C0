@@ -18,4 +18,4 @@ flash: firmware.bin
 	STM32_Programmer_CLI -c port=SWD -w firmware.bin 0x08000000 -V -rst
 
 clean:
-	rm -rf firmware.*
+	rm -rf *.o firmware.*
