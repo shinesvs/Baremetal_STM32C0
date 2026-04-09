@@ -4,7 +4,7 @@ CFLAGS ?= -W -Wall -Wextra -Werror -Wundef -Wshadow -Wdouble-promotion \
 	  -mcpu=cortex-m0plus -mthumb $(EXTRA_CFLAGS)
 
 LDFLAGS ?= -Tlink.ld -nostartfiles -nostdlib --specs=nano.specs -lc -lgcc -Wl,--gc-sections
-SOURCES = main.c
+SOURCES = main.c gpio.c startup.c
 
 build : firmware.elf
 

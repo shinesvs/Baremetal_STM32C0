@@ -36,7 +36,7 @@ struct rcc {
     volatile uint32_t CSR2;         /* 0x60  Control/status 2 (reset flags)         */
 };
 
-#define RCC     ((struct rcc *) 0x40021000)
+#define RCC ((struct rcc *) 0x40021000)
 
 /* IOPENR bit positions — one bit per GPIO bank 
 #define RCC_IOPENR_GPIOAEN  (1U << 0)
