@@ -3,16 +3,19 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include "stm32c031xx.h"
 
-#define GPIO(bank) ((GPIO_TypeDef*) (0x50000000 + 0x400 * (bank)))
-#define PIN(bank, num) ((((bank) - 'A') << 8) | (num))
-#define PINNO(pin) (pin & 255)
-#define PINBANK(pin) (pin >> 8)
+typedef enum
+{
+    GPIO_MODE_INPUT  = 0U,
+    GPIO_MODE_OUTPUT = 1U,
+    GPIO_MODE_AF     = 2U,
+    GPIO_MODE_ANALOG = 3U
+} gpio_mode_t;
 
-enum { GPIO_MODE_INPUT, GPIO_MODE_OUTPUT, GPIO_MODE_AF, GPIO_MODE_ANALOG };
+void gpio_set_mode(GPIO_TypeDef *port, uint8_t pin, gpio_mode_t mode);
+void gpio_write(GPIO_TypeDef *port, uint8_t pin, bool state);
 
-void gpio_set_mode(uint16_t pin, uint8_t mode);
-void gpio_write(uint16_t pin, bool val);
 
 
 #define GPIO_H
