@@ -6,3 +6,4 @@ void rcc_enable_gpioa(){
     
     (void) RCC->IOPENR;
 }
+
