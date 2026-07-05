@@ -1,5 +1,5 @@
 #include <stdint.h>
-
+#include <stdbool.h>
 #include "rcc.h"
 #include "gpio.h"
 #include "stm32c031xx.h"

@@ -18,4 +18,4 @@ void gpio_write(GPIO_TypeDef *port, uint8_t pin, bool state);
 
 
 
-#define GPIO_H
+#endif

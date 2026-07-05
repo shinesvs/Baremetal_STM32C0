@@ -4,6 +4,7 @@
 
 #include "bitfield.h"
 #include <stdint.h>
+#include <stdbool.h>
 
 typedef struct
 {
@@ -1305,4 +1306,4 @@ typedef struct
 
 
 
-#endif STM32C031XX_H
+#endif

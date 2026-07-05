@@ -1,4 +1,4 @@
-
+int main(void);
 __attribute__((naked, noreturn)) void _reset(void) {
   //memset .bss to zero, and copy .data section to RAM region
   extern long _sbss, _ebss, _sdata, _edata, _sidata;
@@ -14,4 +14,4 @@ extern void _estack(void);  // Defined in link.ld
 // 16 standard and 32 STM32-specific IRQ handlers
 __attribute__((section(".vectors"))) void (*const tab[16 + 32])(void) = {
   _estack, _reset
-}
+};

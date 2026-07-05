@@ -1,7 +1,7 @@
 #ifndef RCC_H
 #define RCC_H
 
-void rcc_enable_gpio();
+void rcc_enable_gpioa();
 
 
-#endif RCC_H
+#endif
