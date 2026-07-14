@@ -1,5 +1,5 @@
-#ifndef LED_H
-#define LED_H
+#ifndef LCD_H
+#define LCD_H
 
 static void lcd_delay();
 void led_command_mode();
