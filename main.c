@@ -6,7 +6,10 @@
 
 int main(void) {
     rcc_enable_gpioa();
-    gpio_set_mode(GPIOA, 5U, GPIO_MODE_OUTPUT);
-    gpio_write(GPIOA, 5U, true);
+    rcc_enable_gpiob();
+    rcc_enable_gpioc();
+
+
+    
 }
 

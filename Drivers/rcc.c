@@ -7,3 +7,14 @@ void rcc_enable_gpioa(){
     (void) RCC->IOPENR;
 }
 
+void rcc_enable_gpiob(){
+    RCC->IOPENR |= _VAL2FLD(RCC_IOPENR_GPIOBEN, 1U);
+    
+    (void) RCC->IOPENR;
+}
+
+void rcc_enable_gpioc(){
+    RCC->IOPENR |= _VAL2FLD(RCC_IOPENR_GPIOCEN, 1U);
+    
+    (void) RCC->IOPENR;
+}
